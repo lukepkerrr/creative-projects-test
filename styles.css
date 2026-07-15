@@ -1,0 +1,175 @@
+* {box-sizing: border-box}
+
+body {
+	background-color: #57E3F7;
+	font-family: "Inter", sans-serif;
+}
+
+button:hover {cursor: pointer}
+
+button img {
+	width: 70px;
+	height: 65.5px;
+}
+
+.sidebar {
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	width: 125px;
+	height: 542px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: white;
+	border: 5px solid #38B1C2;
+	border-radius: 20px;
+}
+
+.sidebar-button {
+	width: 94px;
+	height: 78px;
+	border: 3px solid #969695;
+	border-radius: 20px;
+	text-align: center;
+	font-size: 64px;
+	font-family: "Palanquin Dark", sans-serif;
+	line-height: 0.9;
+}
+
+.completed-question {background-color: #DAA4FA}
+
+.current-question {background-color: #B380D3}
+
+.close-button {
+	position: absolute;
+	right: 5%;
+	bottom: 25px;
+	background-color: transparent;
+	border: 0;
+}
+
+.wrapper {
+	border: 5px solid #38B1C2;
+	border-radius: 20px;
+	margin: 0 auto;
+	background-color: white;
+	width: 95%;
+	max-width: 1611px;
+}
+
+.frame {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 95vh;
+	max-height: 893px;
+}
+
+.task {
+	max-width: 510px;
+	max-height: 510px;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+.answer input {
+	border: 3px solid black;
+	border-radius: 20px;
+	font-size: 54px;
+	padding: 8px 42px;
+	width: 100%;
+	max-width: 607px;
+	height: 110px;
+	margin-top: 8px;
+	margin-right: 8px;
+}
+
+.answer span {font-size: 34px}
+
+.answer div {
+	display: flex;
+	align-items: self-end;
+}
+
+.check-answer {
+	background-color: white;
+	border: 3px solid black;
+	border-radius: 20px;
+	width: 114px;
+	height: 110px;
+}
+
+.results {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.results td {
+	text-align: center;
+	border: 3px solid black;
+	font-size: 40px;
+	text-transform: uppercase;
+	padding: 16px;
+}
+
+.q-logo {
+	width: 120px;
+	height: 120px;
+}
+
+.q-answer {
+	width: 65px;
+	height: 65px;
+}
+
+@media (max-width: 1200px) {
+	.results td {
+		font-size: 24px;
+		padding: 8px;
+	}
+	.q-logo {
+		width: 65px;
+		height: 65px;
+	}
+}
+
+@media (max-width: 800px) {
+	.sidebar {display: none}
+	.answer span {font-size: 16px}
+	.answer input {font-size: font-size: 34px}
+	.results td {
+		font-size: 16px;
+		padding: 4px;
+	}
+	.q-logo{
+		width: 30px;
+		height: 30px;
+	}
+	.q-answer{
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media (max-width: 500px) {
+	.results td {
+		font-size: 12px;
+		padding: 0;
+	}
+}
+
+@media (max-height: 500px) {
+	.close-button {
+		bottom: unset;
+		top: 5%;
+	}
+	.sidebar {display: none}
+	.task {
+		height: 50%;
+		width: auto;
+	}
+}
